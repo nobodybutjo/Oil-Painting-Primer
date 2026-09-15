@@ -52,27 +52,27 @@ export default function App() {
       {/* Hero Overview Strip */}
       <div className="bg-stone-100/70 border-b border-stone-200/80 py-3 sm:py-4 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-xs text-stone-600">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <span className="font-semibold text-stone-900">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+            <span className="font-semibold text-stone-900 whitespace-nowrap">
               {isZh ? '学院派油画经典规制' : 'Classical Atelier Standard'}
             </span>
             <span className="text-stone-400">·</span>
-            <span className="hidden sm:inline">
+            <span className="hidden sm:inline truncate">
               {isZh
                 ? '涵盖起稿构图、肥盖瘦物理法则、画笔切面与画材安全'
                 : 'Covers workflow, layering physics, brush geometry & studio safety'}
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-stone-500 font-medium">
-            <span className="hidden md:flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
-              <span>{isZh ? '无味环保溶剂安全' : 'Solvent Safety'}</span>
+          <div className="flex items-center gap-4 text-stone-500 font-medium shrink-0">
+            <span className="hidden md:flex items-center gap-1 whitespace-nowrap">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-700 shrink-0" />
+              <span className="whitespace-nowrap">{isZh ? '无味环保溶剂安全' : 'Solvent Safety'}</span>
             </span>
-            <span className="hidden md:flex items-center gap-1">
-              <CheckCircle2 className="w-3.5 h-3.5 text-blue-700" />
-              <span>{isZh ? '百年不裂配比法则' : 'Archival Integrity'}</span>
+            <span className="hidden md:flex items-center gap-1 whitespace-nowrap">
+              <CheckCircle2 className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+              <span className="whitespace-nowrap">{isZh ? '百年不裂配比法则' : 'Archival Integrity'}</span>
             </span>
           </div>
         </div>

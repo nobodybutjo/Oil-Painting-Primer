@@ -372,11 +372,11 @@ export const VirtualCanvasPlayground: React.FC<VirtualCanvasPlaygroundProps> = (
           </div>
 
           {/* Canvas Clear & Canvas Ground Buttons */}
-          <div className="flex items-center gap-2">
-            <div className="flex items-center bg-stone-100 p-1 rounded-lg border border-stone-200 text-xs">
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="flex items-center bg-stone-100 p-1 rounded-lg border border-stone-200 text-xs shrink-0 flex-nowrap">
               <button
                 onClick={() => setCanvasGround('imprimatura')}
-                className={`px-2 py-1 rounded font-medium cursor-pointer ${
+                className={`px-2.5 py-1 rounded font-medium cursor-pointer whitespace-nowrap ${
                   canvasGround === 'imprimatura'
                     ? 'bg-white text-stone-900 shadow-xs'
                     : 'text-stone-600'
@@ -386,7 +386,7 @@ export const VirtualCanvasPlayground: React.FC<VirtualCanvasPlaygroundProps> = (
               </button>
               <button
                 onClick={() => setCanvasGround('linen')}
-                className={`px-2 py-1 rounded font-medium cursor-pointer ${
+                className={`px-2.5 py-1 rounded font-medium cursor-pointer whitespace-nowrap ${
                   canvasGround === 'linen'
                     ? 'bg-white text-stone-900 shadow-xs'
                     : 'text-stone-600'
@@ -396,7 +396,7 @@ export const VirtualCanvasPlayground: React.FC<VirtualCanvasPlaygroundProps> = (
               </button>
               <button
                 onClick={() => setCanvasGround('white')}
-                className={`px-2 py-1 rounded font-medium cursor-pointer ${
+                className={`px-2.5 py-1 rounded font-medium cursor-pointer whitespace-nowrap ${
                   canvasGround === 'white'
                     ? 'bg-white text-stone-900 shadow-xs'
                     : 'text-stone-600'
@@ -408,11 +408,11 @@ export const VirtualCanvasPlayground: React.FC<VirtualCanvasPlaygroundProps> = (
 
             <button
               onClick={setupCanvasBackground}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-semibold transition-colors cursor-pointer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 text-stone-700 text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap shrink-0"
               title="Reset canvas"
             >
-              <RotateCcw className="w-3.5 h-3.5" />
-              <span>{isZh ? '清空重画' : 'Reset'}</span>
+              <RotateCcw className="w-3.5 h-3.5 shrink-0" />
+              <span className="whitespace-nowrap">{isZh ? '清空重画' : 'Reset'}</span>
             </button>
           </div>
         </div>
